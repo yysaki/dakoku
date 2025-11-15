@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "enter": "deno run -A --env-file main.ts enter",
+    "leave": "deno run -A --env-file main.ts leave",
+    "dryrun": "deno run -A --env-file main.ts dryrun"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1.0.15",
+    "playwright": "npm:playwright@^1.56.1"
+  },
+  "fmt": {
+    "lineWidth": 120
+  }
+}
