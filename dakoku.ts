@@ -31,10 +31,10 @@ export async function dakoku(
     let result: "success" | Error;
 
     if (action.type === "jobcan") {
-      stdout.write(`jobcan(${action.mode})に打刻中`);
+      stdout.write(`jobcan (${action.mode}) に打刻中`);
       result = await jobcanTouch(action, stdout);
     } else { // if (action.type === "slack")
-      stdout.write(`${action.name} (${action.channel}) に投稿中... `);
+      stdout.write(`${action.name} (${action.channel}) に投稿中.... `);
       result = await postMessage(action);
     }
 
