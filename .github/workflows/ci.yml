@@ -9,6 +9,10 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.5
+      - name: setup
+        run: |
+          cp .env.example .env
+          cp config.example.ts config.ts
       - name: deno fmt
         run: deno fmt --check
       - name: deno lint
